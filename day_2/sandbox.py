@@ -1,6 +1,7 @@
 import os
 import openpyxl
 
+<<<<<<< HEAD
 wb = openpyxl.load_workbook('day_2/lecture.xlsx')
 # workbook = openpyxl.load_workbook('day_2/lecture.xlsx')
 # print(wb.sheetnames)
@@ -20,3 +21,7 @@ for sheet in wb:
     y += 1
 
 print(str(wb.sheetnames))
+=======
+workbook = openpyxl.load_workbook('day_2/lecture.xlsx')
+print(str(workbook))
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b

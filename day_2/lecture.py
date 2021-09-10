@@ -8,18 +8,27 @@
 #Use the os.path.join() function to combine folders with the correct slash.
 
 #Begin by importing the os module to the top of your file, like so:
+<<<<<<< HEAD
 from openpyxl import Workbook
 import openpyxl
+=======
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b
 import os
 #(openpyxl must also be imported & workbook created, but they are not in this example for the sake of simplicity).
 from openpyxl.workbook import workbook
 
+<<<<<<< HEAD
 os.getcwd()  # will return the current working directory.
 os.chdir()  # will change the current working directory.  <---- PAY SPECIAL ATTENTION TO THIS ONE
+=======
+os.getcwd() #will return the current working directory.
+os.chdir() #will change the current working directory.  <---- PAY SPECIAL ATTENTION TO THIS ONE
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b
 
 #Review--> Absolute paths begin with the root folder, relative paths do not.
 #The . folder represents "this folder", the .. folder represents "the parent folder".
 
+<<<<<<< HEAD
 os.path.abspath()  # returns an absolute path form of the path passed to it.
 os.path.relpath()  # returns the relative path between two paths passed to it.
 os.makedirs()  # can make folders.
@@ -28,18 +37,36 @@ os.listdir()  # returns a list of strings of filenames.
 os.path.exists()  # returns True if the filename passed to it exists.
 os.path.isfile()  # and
 os.path.isdir()  # return True if they were passed a filename or file path.
+=======
+os.path.abspath() #returns an absolute path form of the path passed to it.
+os.path.relpath() #returns the relative path between two paths passed to it.
+os.makedirs() #can make folders.
+os.path.getsize() #returns a file's size.
+os.listdir() #returns a list of strings of filenames.
+os.path.exists() #returns True if the filename passed to it exists.
+os.path.isfile() #and 
+os.path.isdir() #return True if they were passed a filename or file path.
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b
 
 #
 #-----------------BACK TO EXCEL-------------
 #
 
+<<<<<<< HEAD
 my_workbook = openpyxl.Workbook()
 #Review--> Determine the names of the sheets in the Excel file using the .get_sheet_names() function imported from openpyxl
 my_workbook.get_sheet_names()  # Result -->  ['Sheet']
+=======
+import openpyxl
+my_workbook = openpyxl.Workbook()
+#Review--> Determine the names of the sheets in the Excel file using the .get_sheet_names() function imported from openpyxl
+my_workbook.get_sheet_names() # Result -->  ['Sheet']
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b
 #Notice the correllation between lines 37 and 39 ^^^
 my_sheet = my_workbook.get_sheet_by_name('Sheet')
 
 #How to create a NEW, EMPTY Excel document:
+<<<<<<< HEAD
 my_new_workbook = Workbook()
 #This workbook will always be created with one sheet, which can be accessed using Workbook.active property:
 my_new_worksheet = my_new_workbook.active  # This value is set to 0 by default
@@ -48,13 +75,28 @@ my_new_worksheet = my_new_workbook.active  # This value is set to 0 by default
 #REVIEW SECTION ON SHEETS -->
 
 wb.create_sheet()  # Add a new sheet.
+=======
+from openpyxl import Workbook
+my_new_workbook = Workbook()
+#This workbook will always be created with one sheet, which can be accessed using Workbook.active property:
+my_new_worksheet = my_new_workbook.active  #  This value is set to 0 by default
+
+
+#REVIEW SECTION ON SHEETS --> 
+
+wb.create_sheet() # Add a new sheet.
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b
 #<Worksheet "Sheet1">
 
 # Once you gave a worksheet a name, you can get it as a key of the workbook:
 ws3 = wb["New Title"]
 
 # You can review the names of all worksheets of the workbook with the Workbook.sheetname attribute
+<<<<<<< HEAD
 print(wb.sheetnames)  # Result-->  ['Sheet2', 'New Title', 'Sheet1']
+=======
+print(wb.sheetnames)  #Result-->  ['Sheet2', 'New Title', 'Sheet1']
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b
 
 
 # You can loop through worksheets
@@ -72,7 +114,11 @@ target = wb.copy_worksheet(source)
 #-------INSERTING ROWS & COLUMNS--------
 #Much of the following info is pulled directly from the OpenPyXL official documentation
 
+<<<<<<< HEAD
 #The following openpyxl methods will allow you to insert & delete rows and columns
+=======
+#The following openpyxl methods will allow you to insert & delete rows and columns 
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b
 openpyxl.worksheet.worksheet.Worksheet.insert_rows()
 openpyxl.worksheet.worksheet.Worksheet.insert_cols()
 openpyxl.worksheet.worksheet.Worksheet.delete_rows()
@@ -96,6 +142,7 @@ my_sheet['A1'].value  # Result is 'None' on a black Excel document
 #Review--> Change the value of a cell
 my_sheet['A1'] = 37
 my_sheet['A2'] = 'Pears'
+<<<<<<< HEAD
 #Because we know that when we create a blank Excel document, the starting value is 'None', we can clear cell values by setting them to the Python keyword: None
 
 #How to create a NEW, EMPTY Excel document sheet:
@@ -110,13 +157,31 @@ my_newest_worksheet3 = my_new_workbook.create_sheet(
 
 #-------THE REASON WE TALKED ABOUT THE OS MODULE:  ------
 #We need to use the os module to access files on our machine so that we may create, save, and delete Excel files
+=======
+#Because we know that when we create a blank Excel document, the starting value is 'None', we can clear cell values by setting them to the Python keyword: None 
+
+#How to create a NEW, EMPTY Excel document sheet:
+my_newest_worksheet1 = my_new_workbook.create_sheet("Mysheet")  # insert at the end of the sheets (default)
+#or
+my_newest_worksheet2 = my_new_workbook.create_sheet("Mysheet", 0)  # insert at first position
+#or
+my_newest_worksheet3 = my_new_workbook.create_sheet("Mysheet", -1)  # insert at penultimate position
+
+#-------THE REASON WE TALKED ABOUT THE OS MODULE:  ------
+#We need to use the os module to access files on our machine so that we may create, save, and delete Excel files
+import os
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b
 os.chdir('/Users/tylerpritchard/Desktop/VIT/itp_week_3/day_2')
 my_new_workbook.save('my_new_filename.xlsx')
 #It is good to save your spreadsheets as new files, as opposed to writing over old spreadsheets and risking the loss of your work.
 
 #OpenPyXL provides another way to save your workbook:
+<<<<<<< HEAD
 my_workbook.save(
     '/Users/tylerpritchard/Desktop/VIT/itp_week_3/day_2.lecture.py')
+=======
+my_workbook.save('/Users/tylerpritchard/Desktop/VIT/itp_week_3/day_2.lecture.py')
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b
 
 #RECAP:
 #You can view and modify a sheet's name with its "title" member variable.
@@ -127,4 +192,8 @@ my_workbook.save(
 
 # Read data from one spreadsheet and write it to parts of other spreadsheets.
 # Read data from websites, text files, or the clipboard and write it to a spreadsheet.
+<<<<<<< HEAD
 # Automatically “clean up” data in spreadsheets. For example, it could use regular expressions to read multiple formats of phone numbers and edit them to a single, standard format.
+=======
+# Automatically “clean up” data in spreadsheets. For example, it could use regular expressions to read multiple formats of phone numbers and edit them to a single, standard format.
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b

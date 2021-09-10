@@ -21,6 +21,13 @@
 # Write the data structure to a text file with the .py extension using the pprint module.
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b
 # Project2: Updating a Spreadsheet
 # In this project, you’ll write a program to update cells in a spreadsheet of produce sales. Your program will look through the spreadsheet, find specific kinds of produce, and update their prices. Download this spreadsheet from https://nostarch.com/automatestuff2/. Figure 13-3 shows what the spreadsheet looks like.
 
@@ -40,4 +47,8 @@
 # Open the spreadsheet file.
 # For each row, check whether the value in column A is Celery, Garlic, or Lemon.
 # If it is, update the price in column B.
+<<<<<<< HEAD
 # Save the spreadsheet to a new file (so that you don’t lose the old spreadsheet, just in case).
+=======
+# Save the spreadsheet to a new file (so that you don’t lose the old spreadsheet, just in case).
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b

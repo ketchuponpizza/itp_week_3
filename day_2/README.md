@@ -19,4 +19,8 @@
 
 ### Resources
 - [Automated the Boring Stuff - Working with Excel Spreadsheet](https://automatetheboringstuff.com/2e/chapter13/)
+<<<<<<< HEAD
 - [OpenPyXL](https://openpyxl.readthedocs.org/)
+=======
+- [OpenPyXL](https://openpyxl.readthedocs.org/)
+>>>>>>> 5316a6a19ffbb5e750b61f0a1628d822854fd69b
